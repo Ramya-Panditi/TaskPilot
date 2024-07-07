@@ -1,2 +1,2 @@
-const baseURL = "http://localhost:4000";
+const baseURL = "https://taskpilot-abdw.onrender.com";
 export {baseURL};

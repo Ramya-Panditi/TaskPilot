@@ -90,14 +90,14 @@ function TaskManager({ onClose }) {
   };
 
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog open={open} onClose={() => handleClose()}>
       <DialogTitle>
         Add Task
         <IconButton
           className="close-button m-2"
           edge="end"
           color="inherit"
-          onClick={handleClose}
+          onClick={()=>handleClose()}
           aria-label="close"
         >
           <CloseIcon />
@@ -150,10 +150,10 @@ function TaskManager({ onClose }) {
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose} color="secondary">
+        <Button onClick={()=>handleClose()} color="secondary">
           Cancel
         </Button>
-        <Button onClick={handleSave} color="primary">
+        <Button onClick={()=>{handleSave()}}color="primary">
           Save
         </Button>
       </DialogActions>
